@@ -1,78 +1,24 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Maven template
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
+# Compiled class file
+*.class
 
-.idea/
+# Log file
+*.log
 
-## File-based project format:
-*.iws
-*.iml
-*.ipr
+# BlueJ files
+*.ctxt
+*.html
+*.jsp
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-## Plugin-specific files:
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# IntelliJ
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties 
-将删除 .idea/.rebel.xml.bak
-将删除 .idea/uiDesigner.xml
-将删除 ele_1.iml
-将删除 out/
-将删除 src/main/java/dao/GouxiaoDao.java
-将删除 src/main/java/entity/Gouxiao.java
-将删除 src/main/java/service/GouXiaoService.java
-将删除 src/main/resources/mappers/GouxiaoMapper.xml
-将删除 src/main/resources/rebel.xml
-将删除 src/main/webapp/ContractDataStatistics/
-将删除 src/main/webapp/ProcurementContract/
-将删除 src/main/webapp/ProductContract/
-将删除 src/main/webapp/ServiceContract/
-将删除 src/main/webapp/SpecialContract/
-将删除 src/main/webapp/upload/
-将删除 target/classes/META-INF/
-将删除 target/classes/controller/
-将删除 target/classes/dao/
-将删除 target/classes/entity/
-将删除 target/classes/mappers/CaiGouMapper.xml
-将删除 target/classes/mappers/CalculateTestCostmapper.xml
-将删除 target/classes/mappers/GouxiaoMapper.xml
-将删除 target/classes/mappers/ProductListMapper.xml
-将删除 target/classes/rebel.xml
-将删除 target/classes/service/
-将删除 target/classes/util/
-将删除 target/ele_1/ProcurementContract/
-将删除 target/ele_1/ProductContract/
-将删除 target/ele_1/ServiceContract/
-将删除 target/ele_1/SpecialContract/
-将删除 target/ele_1/WEB-INF/classes/META-INF/
-将删除 target/ele_1/WEB-INF/classes/controller/
-将删除 target/ele_1/WEB-INF/classes/dao/
-将删除 target/ele_1/WEB-INF/classes/entity/
-将删除 target/ele_1/WEB-INF/classes/mappers/CaiGouMapper.xml
-将删除 target/ele_1/WEB-INF/classes/mappers/CalculateTestCostmapper.xml
-将删除 target/ele_1/WEB-INF/classes/mappers/GouxiaoMapper.xml
-将删除 target/ele_1/WEB-INF/classes/mappers/ProductListMapper.xml
-将删除 target/ele_1/WEB-INF/classes/rebel.xml
-将删除 target/ele_1/WEB-INF/classes/service/
-将删除 target/ele_1/WEB-INF/classes/util/
-将删除 target/ele_1/WEB-INF/lib/
-将删除 target/generated-sources/
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*

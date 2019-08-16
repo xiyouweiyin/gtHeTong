@@ -69,7 +69,7 @@ public class CaiGouController {
 
         String createTime=new SimpleDateFormat("yyyy-MM-dd-HH:mm").format(new Date());
         contractCountService.addContract(contractId, "购销合同", createTime,2, caiGou.getId(), 8, caiGou.getPartyAQianZhang(), 0, 3, cityId, "", "", "", "", "", "", "", "", "", "", "", "", "", "");
-       // productListService.addProduct(productLists);
+
         caiGou.setContractCountId(contractCountService.getMaxId());
         caiGouService.addCaiGou(caiGou);
       return "success";

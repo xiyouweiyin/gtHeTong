@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.GouxiaoDao" >
+  <resultMap id="GouxiaoResult" type="entity.Gouxiao" >
+    <result property="id" column="id"></result>
+    <result property="productname" column="productName"/>
+    <result property="jiaohuocity" column="jiaoHuoCity"/>
+    <result property="paymentterm" column="paymentTerm"/>
+    <result property="address" column="address"/>
+    <result property="partyaqianzhang" column="partyAQianZhang"/>
+    <result property="partybqianzhang" column="partyBQianZhang"/>
+    <result property="partyarepresentative" column="partyARepresentative"/>
+    <result property="partybrepresentative" column="partyBRepresentative"/>
+    <result property="partyaphone" column="partyAPhone"/>
+    <result property="partybphone" column="partyBPhone"/>
+    <result property="contractcountid" column="contractCountId"/>
+    <result property="partybopenningbank" column="partyBOpenningBank"/>
+    <result property="paymentmethod" column="paymentMethod"/>
+    <result property="bankaccountname" column="bankAccountName"/>
+    <result property="bankaccount" column="bankAccount"/>
+    <result property="jiaohuostring" column="jiaoHuoString"/>
+    <result property="danwei" column="danwei"/>
+    <result property="shuliang" column="shuliang"/>
+    <result property="costchn" column="costChn"/>
+    <result property="servicestring1" column="serviceString1"/>
+    <result property="servicestring2" column="serviceString2"/>
+    <result property="paymentstring" column="paymentString"/>
+    <result property="systemstring" column="systemString"/>
+    <result property="otherstring" column="otherString"/>
+    <result property="jiaohuoMethod" column="jiaohuoMethod"/>
+    <result property="yunshuCost" column="yunshuCost"/>
+    <result property="serviceString3" column="serviceString3"/>
+    <result property="shouhouService" column="shouhouService"/>
+    <result property="systemString2" column="systemString2"/>
+    <result property="weiyuejin" column="weiyuejin"/>
+    <result property="weiyuejin2" column="weiyunjin2"/>
+    <result property="weiyueString1" column="weiyueString1"/>
+    <result property="weiyueString2" column="weiyueString2"/>
+    <result property="zhengyiString" column="zhengyiString"/>
+    <result property="otherString2" column="otherString2"/>
+  </resultMap>
+<delete id="deleteById" parameterType="java.lang.Integer">
+  delete from gouXiao where id=#{id}
+</delete>
+
+  <select id="findById" parameterType="java.lang.Integer" resultType="entity.Gouxiao">
+   select * FROM gouXiao  WHERE contractCountId=#{contractCountId}
+  </select>
+
+  <insert id="addGouXiao" parameterType="entity.Gouxiao">
+    insert into gouXiao(productname,jiaohuocity,paymentterm ,address,partyaqianzhang,partybqianzhang,partyarepresentative,partybrepresentative
+    ,partyaphone,partybphone,contractcountid,partybopenningbank,paymentmethod,bankaccountname,bankaccount,jiaohuostring,
+    danwei,shuliang,costchn,servicestring1,servicestring2,paymentstring,systemstring,otherstring,jiaohuoMethod,yunshuCost,
+    serviceString3,shouhouService,systemString2,weiyuejin,weiyunjin2,weiyueString1,weiyueString2,zhengyiString,otherString2) values
+    (#{productname},#{jiaohuocity},#{paymentterm},#{address},#{partyaqianzhang},#{partybqianzhang},#{partyarepresentative},#{partybrepresentative},
+    #{partyaphone},#{partybphone},#{contractcountid},#{partybopenningbank},#{paymentmethod},#{bankaccountname},#{bankaccount},#{jiaohuostring},
+    #{danwei},#{shuliang},#{costchn},#{servicestring1},#{servicestring2},#{paymentstring},#{systemstring},#{otherstring},#{jiaohuoMethod},#{yunshuCost},
+    #{serviceString3},#{shouhouService},#{systemString2},#{weiyuejin},#{weiyuejin2},#{weiyueString1},#{weiyueString2},#{zhengyiString},#{otherString2});
+
+  </insert>
+
+  <update id="updateGouXiao" parameterType="entity.Gouxiao">
+    update gouXiao set productName=#{gouxiao.productname},jiaohuocity=#{gouxiao.jiaohuocity},paymentterm=#{gouxiao.paymentterm},address=#{gouxiao.address},partyaqianzhang=#{gouxiao.partyaqianzhang},partybqianzhang=#{gouxiao.partybqianzhang},
+    partyarepresentative=#{gouxiao.partyarepresentative},partybrepresentative=#{gouxiao.partybrepresentative},partyaphone=#{gouxiao.partyaphone},partybphone=#{gouxiao.partybphone},contractcountid=#{gouxiao.contractcountid},partybopenningbank=#{gouxiao.partybopenningbank},
+    paymentmethod=#{gouxiao.paymentmethod},bankaccountname=#{gouxiao.bankaccountname},bankaccount=#{gouxiao.bankaccount},jiaohuostring=#{gouxiao.jiaohuostring},danwei=#{gouxiao.danwei},shuliang=#{gouxiao.shuliang},costchn=#{gouxiao.costchn},servicestring1=#{gouxiao.servicestring1},
+    servicestring2=#{gouxiao.servicestring2},paymentstring=#{gouxiao.paymentstring},systemstring=#{gouxiao.systemstring},otherstring=#{gouxiao.otherstring},jiaohuoMethod=#{gouxiao.jiaohuoMethod},
+    yunshuCost=#{gouxiao.yunshuCost},serviceString3=#{gouxiao.serviceString3},shouhouService=#{gouxiao.shouhouService},systemString2=#{gouxiao.systemString2},weiyuejin=#{gouxiao.weiyuejin},weiyunjin2=#{gouxiao.weiyuejin2},zhengyiString=#{gouxiao.zhengyiString},otherString2=#{gouxiao.otherString2} where contractCountId=#{contractCountId}
+  </update>
+
+</mapper>

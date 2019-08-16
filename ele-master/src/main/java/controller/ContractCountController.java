@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import service.CaiGouService;
 import service.ContractCountService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,9 @@ import java.util.Map;
 public class ContractCountController {
     @Autowired
     private ContractCountService contractCountService;
+
+    @Autowired
+    private CaiGouService caiGouService;
 
     //查询所有合同信息
 
@@ -87,6 +91,7 @@ public class ContractCountController {
     @ResponseBody
     public String   deleteById(@PathVariable Integer id){
         contractCountService.deleteById(id);
+        caiGouService.deleteById(id);
         return "success";
 
     }

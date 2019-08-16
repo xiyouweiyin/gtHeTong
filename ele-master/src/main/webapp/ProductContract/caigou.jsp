@@ -96,7 +96,7 @@
                     <td colspan='8'style="width:30px" id="last">总计:<input type="text" id="zongji" name="zongji"   value="0" readonly/>
                         <strong><select id="taxData"  name="taxData">
 
-                            <option  value="" </option>
+                            <option  value=""</option>
 
                         </select></strong></td>
                 </tr>

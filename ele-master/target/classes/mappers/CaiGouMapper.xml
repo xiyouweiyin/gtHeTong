@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CaiGouDao">
+    <resultMap id="CaiGouResult" type="entity.CaiGou">
+        <result property="id" column="id"/>
+        <result property="contractCountId" column="contractCountId"/>
+        <result property="purchaseName" column="purchaseName"/>
+        <result property="applyName" column="applyName"/>
+        <result property="supplyName" column="supplyname"/>
+        <result property="qiandingplace" column="qiandingplace"/>
+        <result property="event" column="event"/>
+        <result property="product" column="product"/>
+        <result property="workDay1" column="workDay1"/>
+        <result property="costChn" column="costChn"/>
+        <result property="workDay2" column="workDay2"/>
+        <result property="years" column="years"/>
+        <result property="days" column="days"/>
+        <result property="weiYueJin1" column="weiYueJin1"/>
+        <result property="weiYueJin2" column="weiYueJin2"/>
+        <result property="weiYueJin3" column="weiYueJin3"/>
+        <result property="weiYueJin4" column="weiYueJin4"/>
+        <result property="partyARepresentative" column="partyARepresentative"/>
+        <result property="partyBRepresentative" column="partyBRepresentative"/>
+        <result property="partyAPhone" column="partyAPhone"/>
+        <result property="partyBPhone" column="partyBPhone"/>
+        <result property="partyADate" column="partyADate"/>
+        <result property="partyBDate" column="partyBDate"/>
+        <result property="zongJi" column="zongJi"/>
+        <result property="partyAQianZhang" column="partyAQianZhang"/>
+        <result property="partyBQianZhang" column="partyBQianZhang"/>
+        <result property="taxData" column="taxData"/>
+        <result property="xiJie" column="xiJie"/>
+        <result property="xiJie1" column="xijie1"/>
+        <result property="xiJie2" column="xijie2"/>
+        <result property="xiJie3" column="xijie3"/>
+        <result property="xiJie4" column="xijie4"/>
+        <result property="xiJie5" column="xijie5"/>
+        <result property="xiJie6" column="xijie6"/>
+
+    </resultMap>
+    <insert id="addCaiGou" parameterType="entity.CaiGou">
+        insert into caiGou( contractCountId,purchaseName, applyName, supplyname, qiandingplace, event, product, workDay1, costChn, workDay2, years, days, weiYueJin1, weiYueJin2, weiYueJin3, weiYueJin4, partyARepresentative, partyBRepresentative, partyAPhone, partyBPhone, partyADate, partyBDate, zongJi, partyAQianZhang, partyBQianZhang, taxData, xiJie, xijie1, xijie2, xijie3, xijie4, xijie5, xijie6)
+        values(#{contractCountId},#{purchaseName},#{applyName},#{supplyName},#{qiandingplace},#{event},#{product},#{workDay1},
+        #{costChn},#{workDay2},#{years},#{days},#{weiYueJin1},#{weiYueJin2},#{weiYueJin3},#{weiYueJin4},#{partyARepresentative},#{partyBRepresentative},
+        #{partyAPhone},#{partyBPhone},#{partyADate},#{partyBDate},#{zongJi},#{partyAQianZhang},#{partyBQianZhang},#{taxData},#{xiJie},#{xiJie1},#{xiJie2},#{xiJie3},#{xiJie4},#{xiJie5},#{xiJie6})
+    </insert>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="entity.CaiGou">
+        select * from caiGou where  contractCountId=#{contractCountId}
+    </select>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from  caiGou where contractCountId=#{contractCountId}
+    </delete>
+
+    <update id="updateCaiGou" parameterType="entity.CaiGou">
+        update caiGou set purchaseName=#{caigou.purchaseName},applyName=#{caigou.applyName},supplyname=#{caigou.supplyName}, qiandingplace=#{caigou.qiandingplace}, event=#{caigou.event}, product=#{caigou.product}, workDay1=#{caigou.workDay1},
+         costChn=#{caigou.costChn}, workDay2=#{caigou.workDay2}, years=#{caigou.years}, days=#{caigou.days}, weiYueJin1=#{caigou.weiYueJin1}, weiYueJin2=#{caigou.weiYueJin2}, weiYueJin3=#{caigou.weiYueJin3}, weiYueJin4=#{caigou.weiYueJin4},
+          partyARepresentative=#{caigou.partyARepresentative}, partyBRepresentative=#{caigou.partyBRepresentative}, partyAPhone=#{caigou.partyAPhone}, partyBPhone=#{caigou.partyBPhone},
+           partyADate=#{caigou.partyADate}, partyBDate=#{caigou.partyBDate}, zongJi=#{caigou.zongJi}, partyAQianZhang=#{caigou.partyAQianZhang}, partyBQianZhang=#{caigou.partyBQianZhang}, taxData=#{caigou.taxData}, xiJie=#{caigou.xiJie}, xijie1=#{caigou.xiJie1}, xijie2=#{caigou.xiJie2}, xijie3=#{caigou.xiJie3}, xijie4=#{caigou.xiJie4}, xijie5=#{caigou.xiJie5}, xijie6=#{caigou.xiJie6} where contractCountId=#{contractCountId}
+    </update>
+
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CalculateTestCostDao">
+    <resultMap id="ProductListResult" type="entity.ProductList"></resultMap>
+    <insert id="addProduct" parameterType="java.util.List">
+        insert into productList(mc, ggxh, dw, shuliang, dj, contractCountId, beizhu)
+        values 
+        <foreach collection="productLists" item="product"  index="index" separator=",">
+            (#{product.mc},#{product.ggxh},#{product.dw},#{product.shuliang},#{product.di},#{product.contractCountId},#{product.beizhu})
+        </foreach>
+    </insert>
+
+
+</mapper>
