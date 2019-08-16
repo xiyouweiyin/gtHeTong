@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>计算测试费用合同</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script language="javascript" src="dayin/jquery-1.4.4.min.js"></script>
+<script language="javascript" src="dayin/jquery.jqprint-0.3.js"></script>
+<style type="text/css">
+	.inputCss{
+		border-left: 0px;border-right: 0px;border-top: 0px;border-color: green;
+	}
+	.conName{
+		font-size: 22px;
+		font-weight: normal;
+	}
+	p{
+		line-height: 30px;
+	}
+</style>
+</head>
+
+<body>
+	<div style="display: none;"><table>
+	<%--<%ArrayList<CityData> cityDatas=(ArrayList<CityData>) session.getAttribute("cityDatas");int i=0;int j=0;
+			for(CityData city:cityDatas){ j=0;%>
+				<tr><td id="<%=i+""+j%>"><%=city.getBankName() %></td><td id="<%=i+""+(j+1)%>"><%=city.getBankAccountName() %></td><td id="<%=i+""+(j+2)%>"> <%=city.getBankAccount() %></td><td id="<%=i+""+(j+3)%>"><%=city.getId() %></td></tr>
+			<%i++;j++;} %>--%>
+			</table>
+			</div>
+	<div  style="width: 800px;margin-left: 100px;" >
+	
+		<form action="CalculateTestCost" method="post">
+		<div id="div1">
+		<h2 align="center" style="margin-top: 30px;"><input id="contractName" value="计算服务费用合同" class="inputCss conName"/>模板</h2><!-- 计算测试费用合同 -->
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;甲方：<input id="partyA" name="partyA" type="text" value=""  class="inputCss"><br>
+								<table style="margin-left: 30px">
+      						<tr>
+									<td><input id="unknow13" name="unknow13" type="text" style="width: 60px;" class="inputCss">：<input id="unknow14" name="unknow14" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow15" name="unknow15" type="text" style="width: 60px;" class="inputCss">：<input id="unknow16" name="unknow16" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow17" name="unknow17" type="text" style="width: 60px;" class="inputCss">：<input id="unknow18" name="unknow18" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+      					</table>
+		&nbsp;&nbsp;&nbsp;&nbsp;乙方：<strong><select id="cityName"><%--<%ArrayList<CityData> cityDatas2=(ArrayList<CityData>) session.getAttribute("cityDatas");
+																		for(CityData city:cityDatas2){%>
+																			
+																			<option value="<%=city.getCityName() %>"><%=city.getCityName() %></option>
+																		<%} %>--%>
+																		</select></strong>
+							<table style="margin-left: 30px">
+      						<tr>
+									<td><input id="unknow19" name="unknow19" type="text" style="width: 60px;" class="inputCss">：<input id="unknow20" name="unknow20" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow21" name="unknow21" type="text" style="width: 60px;" class="inputCss">：<input id="unknow22" name="unknow22" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow23" name="unknow23" type="text" style="width: 60px;" class="inputCss">：<input id="unknow24" name="unknow24" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+      					</table>		
+		&nbsp;&nbsp;&nbsp;&nbsp;<input id="firstString" value="甲乙双方本着平等、自愿、协商一致的原则，就甲方使用艮泰高性能计算系统资源事宜，签订本合同。"  style="width: 750px;" class="inputCss"/><br></p>
+		<span style="font-size: 20px;">一、甲方的义务和权利</span><br>
+		<p>&nbsp;&nbsp;1. 甲方的义务<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.1 甲方需严格遵守乙方的用户使用手册，使用与保管乙方提供的计算资源，确保乙方的资源有符合乙方规定的使用环境；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.2 甲方有义务向乙方报告使用过程中出现的技术问题，并书面记录发生问题时的计算环境及相关信息；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.3 甲方向乙方支付相关<input id="productName" value="计算服务" class="inputCss"/>（技术服务、测试、机时等）费用。</p>
+		<p>&nbsp;&nbsp;2. 甲方的权力<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.1 甲方自主根据工作需求利用乙方提供的计算资源完成相关计算工作；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.2 甲方有权要求乙方及时提供人员培训、技术支持等服务；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.3 甲方拥有使用乙方计算服务取得的科研成果的所有权；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.4 甲方有权利对系统作改动。</p>
+		<span style="font-size: 20px;">二、乙方的义务和权力</span><br>
+		<p>&nbsp;&nbsp;1. 乙方的义务<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.1 乙方按照合同约定向甲方提供定制化的技术支持服务，根据甲方的使用情况对计算系统相关资源（含应用软件、操作系统、支持库函数及必要的硬件设备）作调整，以帮助甲方更有效地开展相关课题研究；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.2 乙方按照合同要求提供甲方所需计算资源，完成相关的安装与调试；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1.3 乙方根据甲方的使用情况，定期回访甲方的使用情况及乙方相关服务人员的服务质量。</p>
+		<p>&nbsp;&nbsp;2. 乙方的权力<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.1 在乙方对甲方的不正确操作提出书面的意见并提供相关的培训支持后，甲方仍重复相关操作，造成使用不便，乙方有权要求甲方承担对更正相关不便性引起的费用；<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.2 乙方有权引用甲方使用乙方资源取得的公开了的研究成果。</p>
+		<span style="font-size: 20px;">三、保密、成果归属</span><br>
+		<p>&nbsp;&nbsp;1. 甲乙双方在未经对方允许的情况下，不得向第三方泄露本合同规范的相关技术及商务信息。<br>
+		&nbsp;&nbsp;2. 甲方利用乙方服务所取得的研究、开发成果等归甲方所有。</p>
+		<span style="font-size: 20px;">四、合同内容</span><br>
+		<p>&nbsp;&nbsp;1. 服务内容：
+						<br> &nbsp;&nbsp;&nbsp;&nbsp;<textarea id="serviceData" rows="9" cols="90">    甲方在乙方所有的并行计算平台上，进行计算任务的提交和查看。系统满足多用户同时使用。乙方完成Linux 操作系统的安装和调试以及系统优化。安装科学计算BLAS、ATLAS、Lapack、ScalaPack、FFTW等。含有的软件开发环境支持C， C++， Fortran，还包括了并行编译，以及基于GNU软件，含常用的科学作图与LATEX文档写作软件。Gcc、G77、Gfortran、Intel FORTRAN编译器、并行编译MPICH2。完成并行计算系统硬件的安装与调试，完成Linux 操作系统的安装与调试，及系统优化；协助用户完成现有应用程序的并行化工作。提供网络文件系统和网络系统设置及维护。提供网络安全、登陆服务配置。提供安装MPI并行计算环境、浮点计算数学库及相关编译工具。提供系统管理、系统使用培训，包括开关机系统、文件系统维护、文件系统结构、常规Linux 使用介绍等。协助用户尽快将系统投入使用。24小时内响应，3个工作日内解决问题。</textarea><br></p>
+ 		<p>&nbsp;&nbsp;2. 服务期限与费用：<input id="serviceTerm" name="serviceTerm" type="text" class="inputCss" style="width: 40px;">个月，共计<input type="text" id="jiShiChn" class="inputCss" style="width: 80px;"/>个机时，合计计算测试费用为<input type="text" id="costChn" class="inputCss" style="width: 80px"/>(￥<input style="width: 100px;" id="cost" name="cost" type="text" class="inputCss">元)。</p>
+		<p>&nbsp;&nbsp;3. 服务保证<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.1 乙方保证所提供的计算系统符合合同所规定的要求，在正常使用的条件下，应具备满足用户正常使用的性能。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.2 <input id="fuWuString" value="乙方为甲方提供使用培训和使用支持，安装用户所需的专业软件（非GPL协议的软件由甲方提供）。" style="width: 650px;" class="inputCss"/><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.3 乙方为甲方监控用户程序的运行，备份用户数据，协助用户调试源程序，提供并行编程指导合理化建议。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.4 乙方为甲方提供24小时内响应，三个工作日内解决问题的技术支持服务。</p>
+		<span style="font-size: 20px;">五、付款方式</span><br>
+		<p>&nbsp;&nbsp;1. <input type="text" id="paymentString" value="甲方于合同生效后5个工作日内向乙方一次性支付货款。" style="width: 450px;"  class="inputCss" /></p>
+		<p>&nbsp;&nbsp;2. 支付方式：<input type="text" id="paymentMethod" value="银行转账" class="inputCss" style="width: 150px;"/><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乙方开户行：<input type="text" id="partyBOpeningBank" value="" class="inputCss" style="width: 320px;"/><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账户名：<input type="text" id="bankAccountName" value="" class="inputCss" style="width: 320px;"/><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号：<input type="text" id="bankAccount" value="" class="inputCss" style="width: 220px;"/></p><b id="cityId" style="display: none;"></b>
+		<span style="font-size: 20px;">六、异议的解决</span><br>
+		<p>&nbsp;&nbsp;1. 甲方在使用过程中应当场将系统不符合约定的情况及处理方式以书面方式通知乙方。</p>
+		<p>&nbsp;&nbsp;2. 乙方应在收到甲方的书面异议后七天内负责处理问题，否则将视为默认甲方提出的异议和处理意见。</p>
+		<p>&nbsp;&nbsp;3. 双方应以友好合作的方式尽各自最大的诚意全面履行本协议。</p>
+		<p>&nbsp;&nbsp;4. <input value="" class="inputCss" id="yiYiString" style="width: 650px;"/></p>
+		<span style="font-size: 20px;">七、违约责任</span><br>
+		<p>&nbsp;&nbsp;1. 任何一方不履行协议义务或者履行协议义务不符合约定的，应当承担继续履行或采取补救措施或赔偿损失等违约责任。</p>
+		<p>&nbsp;&nbsp;2. 乙方违约责任<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.1 乙方无正当理由不能交付甲方租赁的计算资源，应向甲方偿付合同总价款的20%作为违约金，违约金不足以补偿损失的，甲方有权要求乙方补足。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2.2 乙方逾期交付计算资源，应在交付前与甲方协商，甲方仍需求的，乙方应立即交付，按照逾期交付部分费用的每天千分之四支付逾期交付违约金，同时承担甲方因此遭受的损失费用。</p>
+		<p>&nbsp;&nbsp;3.甲方违约责任<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.1 在合同生效后，甲方无正当理由取消租赁的计算资源，应向乙方偿付合同总价款的<input id="liqDamagesPerc" name="liqDamagesPerc" type="text" class="inputCss" style="width: 60px;" value=""  />%作为违约金，违约金不足以补偿损失的，乙方有权要求甲方补足。<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3.2 甲方逾期支付计算费用的按照逾期付款金额的每天<input id="withinTimePerc" name="withinTimePerc" type="text" class="inputCss" style="width: 100px;" value="例：千分之四" onfocus="if(value=='例：千分之四'){this.value=''}" onblur="if(value==''){this.value='例：千分之四'}" >支付逾期付款违约金。</p>
+		<span style="font-size: 20px;">八、争议解决</span><br>
+		<p>&nbsp;&nbsp;1. 本协议在执行过程中发生的争议，均应通过双方友好协商解决。<br>
+		&nbsp;&nbsp;2. 协商不成的，双方一致同意提交<input id="address" style="width: 80px" type="text" class="inputCss"/>申请仲裁。</p>
+		<span style="font-size: 20px;">九、其他</span><br>
+		<p>&nbsp;&nbsp;1. 本协议自双方签字盖章之日起生效。<br>
+		&nbsp;&nbsp;2. <input type="text" class="inputCss" id="otherString" style="width: 350px;" value="本合同一式肆份，甲方执叁份，乙方执壹份。"/></p>
+		<span style="font-size: 20px;">十、未尽事宜</span><br>
+		<p>&nbsp;&nbsp; 如有未尽事宜，可经双方协商一致后签订补充协议书。 <br>
+		<table>
+			<tr>
+				<td>甲方签章：<input type="text" id="partyAQianZhang" name="partyAQianZhang" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>乙方签章：<input type="text" id="partyBQianZhang" name="partyBQianZhang" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td>代 表 人：<input id="partyARepresentative" name="partyARepresentative" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>代 表 人：<input id="partyBRepresentative" class="inputCss" name="partyBRepresentative" type="text"></td>
+			</tr>
+			<tr>
+				<td>联系电话：<input id="partyAPhone" name="partyAPhone" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>联系电话：<input id="partyBPhone" name="partyBPhone" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow1" name="unknow1" type="text" style="width: 60px;" class="inputCss">：<input id="unknow2" name="unknow2" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow3" name="unknow3" type="text" style="width: 60px;" class="inputCss">：<input id="unknow4" name="unknow4" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow5" name="unknow5" type="text" style="width: 60px;" class="inputCss">：<input id="unknow6" name="unknow6" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow7" name="unknow7" type="text" style="width: 60px;" class="inputCss">：<input id="unknow8" name="unknow8" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow9" name="unknow9" type="text" style="width: 60px;" class="inputCss">：<input id="unknow10" name="unknow10" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow11" name="unknow11" type="text" style="width: 60px;" class="inputCss">：<input id="unknow12" name="unknow12" type="text" class="inputCss"></td>
+			</tr>
+		</table>
+	</p>
+		</div>
+		<input type="button" id="saveButton"  value="保存">
+		</form>
+	</div>
+	<br><br><br><br><br>
+	
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>材料费合同模板</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/heTongModel.js"></script>
+<script language="javascript" src="dayin/jquery-1.4.4.min.js"></script>
+<script language="javascript" src="dayin/jquery.jqprint-0.3.js"></script>
+<style type="text/css">
+	.inputCss{
+		border-left: 0px;border-right: 0px;border-top: 0px;border-color: green;
+	}
+	p{
+		line-height: 30px;
+	}
+	.conName{
+		font-size: 22px;
+		font-weight: normal;
+	}
+</style>
+</head>
+<body>
+<div style="display: none;"><table>
+	<%--<%ArrayList<CityData> cityDatas=(ArrayList<CityData>) session.getAttribute("cityDatas");int i=0;int j=0;
+			for(CityData city:cityDatas){ j=0;%>
+				<tr><td id="<%=i+""+j%>"><%=city.getBankName() %></td><td id="<%=i+""+(j+1)%>"><%=city.getBankAccountName() %></td><td id="<%=i+""+(j+2)%>"> <%=city.getBankAccount() %></td><td id="<%=i+""+(j+3)%>"><%=city.getId() %></td></tr>
+			<%i++;j++;} %>--%>
+			</table>
+			</div>
+			<div  style="width: 800px;margin-left: 100px;">
+				
+<form action="" method="post">
+		<div id="div1">
+		<h2 align="center" style="margin-top: 30px;"><input id="contractName" value="通用合同"  class="inputCss conName">模板</h2><!-- 计算测试费用合同 -->
+      　  　  <p>&nbsp;&nbsp;&nbsp;&nbsp;买方（甲方）：<input type="text" class="inputCss" id="partyA"/>
+      					<table style="margin-left: 63px">
+      						<tr>
+									<td><input id="unknow13" name="unknow13" type="text" style="width: 60px;" class="inputCss">：<input id="unknow14" name="unknow14" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow15" name="unknow15" type="text" style="width: 60px;" class="inputCss">：<input id="unknow16" name="unknow16" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow17" name="unknow17" type="text" style="width: 60px;" class="inputCss">：<input id="unknow18" name="unknow18" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+      					</table>
+      			&nbsp;&nbsp;&nbsp;&nbsp;卖方（乙方）： <strong><select id="cityName"><%--<%ArrayList<CityData> cityDatas2=(ArrayList<CityData>) session.getAttribute("cityDatas");
+																		for(CityData city:cityDatas2){%>																		
+																			<option value="<%=city.getCityName() %>"><%=city.getCityName() %></option>
+																		<%} %>--%></select></strong>
+							<table style="margin-left: 63px">
+      						<tr>
+									<td><input id="unknow19" name="unknow19" type="text" style="width: 60px;" class="inputCss">：<input id="unknow20" name="unknow20" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow21" name="unknow21" type="text" style="width: 60px;" class="inputCss">：<input id="unknow22" name="unknow22" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+								<tr>
+									<td><input id="unknow23" name="unknow23" type="text" style="width: 60px;" class="inputCss">：<input id="unknow24" name="unknow24" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								</tr>
+      					</table>			
+     &nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="2" cols="90" id="firstString">    甲乙双方本着平等、自愿、协商一致的原则，就乙方为甲方提供凝聚态物理计算模拟系统专业测试技术服务事宜，签订本合同。</textarea></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="20" cols="90" id="serviceData"></textarea><b id="cityId" style="display: none;"></b></p>
+	<p>
+		<table>
+			<tr>
+				<td>甲方签章：<input type="text" id="partyAQianZhang" name="partyAQianZhang" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>乙方签章：<input type="text" id="partyBQianZhang" name="partyBQianZhang" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td>代 表 人：<input id="partyARepresentative" name="partyARepresentative" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>代 表 人：<input id="partyBRepresentative" class="inputCss" name="partyBRepresentative" type="text"></td>
+			</tr>
+			<tr>
+				<td>联系电话：<input id="partyAPhone" name="partyAPhone" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>联系电话：<input id="partyBPhone" name="partyBPhone" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow1" name="unknow1" type="text" style="width: 60px;" class="inputCss">：<input id="unknow2" name="unknow2" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow3" name="unknow3" type="text" style="width: 60px;" class="inputCss">：<input id="unknow4" name="unknow4" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow5" name="unknow5" type="text" style="width: 60px;" class="inputCss">：<input id="unknow6" name="unknow6" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow7" name="unknow7" type="text" style="width: 60px;" class="inputCss">：<input id="unknow8" name="unknow8" type="text" class="inputCss"></td>
+			</tr>
+			<tr>
+				<td><input id="unknow9" name="unknow9" type="text" style="width: 60px;" class="inputCss">：<input id="unknow10" name="unknow10" type="text" class="inputCss">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input id="unknow11" name="unknow11" type="text" style="width: 60px;" class="inputCss">：<input id="unknow12" name="unknow12" type="text" class="inputCss"></td>
+			</tr>
+		</table>
+	</p>
+</div>
+		<input type="button" id="saveButton"  value="保存">
+		</div>
+</body>
+</html>

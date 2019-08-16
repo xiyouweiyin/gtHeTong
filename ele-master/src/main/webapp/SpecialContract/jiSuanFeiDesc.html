@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>计算费明细</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jiSuanFeiDesc.js"></script>
+<script language="javascript" src="dayin/jquery-1.4.4.min.js"></script>
+<script language="javascript" src="dayin/jquery.jqprint-0.3.js"></script>
+<style type="text/css">
+	.inputCss{
+		border-left: 0px;border-right: 0px;border-top: 0px;border-color: green;
+	}
+	p{
+		line-height: 30px;
+	}
+	.conName{
+		font-size: 22px;
+		font-weight: normal;
+	}
+</style>
+</head>
+<body>
+<div style="display: none;"><table>
+	<%--<%ArrayList<CityData> cityDatas=(ArrayList<CityData>) session.getAttribute("cityDatas");int i=0;int j=0;
+			for(CityData city:cityDatas){ j=0;%>
+				<tr><td id="<%=i+""+j%>"><%=city.getBankName() %></td><td id="<%=i+""+(j+1)%>"><%=city.getBankAccountName() %></td><td id="<%=i+""+(j+2)%>"> <%=city.getBankAccount() %></td><td id="<%=i+""+(j+3)%>"><%=city.getId() %></td></tr>
+			<%i++;j++;} %>--%>
+			</table>
+			</div>
+			<div  style="width: 800px;margin-left: 100px;">
+				
+<form action="" method="post"><b id="cityId" style="display: none;"></b>
+		<div id="div1">
+		<h2 align="center" style="margin-top: 30px;"><input id="contractName" style="width: 350px;" value="艮泰计算模拟平台计算服务费用明细"  class="inputCss conName">模板</h2>
+     <p>&nbsp;&nbsp;兹与<input id="partyA" class="inputCss" style="width: 80px"/>签订计算资源租赁服务协议，使用<input id="productName" class="inputCss" style="width: 80px"/>科研应用软件（涉及商业软件安装介质及相关license由客户提供）进行<input id="productName2" class="inputCss" style="width: 80px"/>相关计算任务。<br>
+&nbsp;&nbsp;计算与测试时间：共<input id="serviceTerm" class="inputCss" style="width: 80px"/>个月；<br>
+&nbsp;&nbsp;计算与测试累计机时：总机时=核数*24小时*30天*<input id="jiShi" class="inputCss" style="width: 80px"/>个月<br>
+                          <div style="margin-left: 110px;"><input id="core" class="inputCss" style="width: 80px"/>Core*24*30*<input id="jiShi2" class="inputCss" style="width: 80px"/>=<input id="jiShi3" class="inputCss" style="width: 80px"/>机时；</div><br>
+ &nbsp;&nbsp;机时单价为<input id="danJia" class="inputCss" style="width: 80px"/>元，优惠<input id="youHui" class="inputCss" style="width: 80px"/>元，计算服务费用合计人民币<input id="costChn" class="inputCss" style="width: 80px"/>元。</p>
+<p>注：单机时即一个核计算一个小时，总机时即总核数*设备运行的总时间。</p>
+<p style="float: right;"><strong><select id="cityName"><%--<%ArrayList<CityData> cityDatas2=(ArrayList<CityData>) session.getAttribute("cityDatas");
+																		for(CityData city:cityDatas2){%>																		
+																			<option value="<%=city.getCityName() %>"><%=city.getCityName() %></option>
+																		<%} %>--%></select></strong></p>
+</div>
+		<div style="margin-top: 80px;" align="center"><input type="button" id="saveButton"  value="保存"></div>
+		</div>
+</body>
+</html>

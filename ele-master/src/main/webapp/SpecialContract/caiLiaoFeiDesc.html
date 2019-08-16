@@ -1,0 +1,97 @@
+<%--<%ArrayList<CaiLiaoFeiDesc> descList=(ArrayList<CaiLiaoFeiDesc>)request.getAttribute("descList"); %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>材料费明细模板</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/caiLiaoFeiDesc.js"></script>
+<script language="javascript" src="dayin/jquery-1.4.4.min.js"></script>
+<script language="javascript" src="dayin/jquery.jqprint-0.3.js"></script>
+<style type="text/css">
+	.inputCss{
+		border-left: 0px;border-right: 0px;border-top: 0px;border-color: green;
+	}
+	p{
+		line-height: 30px;
+	}
+	.conName{
+		font-size: 22px;
+		font-weight: normal;
+	}
+</style>
+</head>
+<body>
+<div style="display: none;"><table>
+	<!--<%&#45;&#45;<%ArrayList<CityData> cityDatas=(ArrayList<CityData>) session.getAttribute("cityDatas");int i=0;int j=0;
+			for(CityData city:cityDatas){ j=0;%>
+				<tr><td id="<%=i+""+j%>"><%=city.getBankName() %></td><td id="<%=i+""+(j+1)%>"><%=city.getBankAccountName() %></td><td id="<%=i+""+(j+2)%>"> <%=city.getBankAccount() %></td><td id="<%=i+""+(j+3)%>"><%=city.getId() %></td></tr>
+			<%i++;j++;} %>&#45;&#45;%>-->
+			</table>
+			</div>
+				<%--<%String contractId=(String)request.getAttribute("contractId");if(contractId!=null&&!"".equals(contractId.trim())){ %>
+		<b id="contractId" style="display: none;"><%=contractId %></b>
+	<%request.removeAttribute("contractId");} %>
+			<%String flag=(String)request.getAttribute("flag");if(flag!=null&&!"".equals(flag.trim())){ %>
+		<b id="flag" style="display:none "><%=flag %></b>
+	<%request.removeAttribute("flag");} %>--%>
+			<div  style="width: 800px;margin-left: 100px;" >
+				
+<form action="" method="post"><b id="cityId" style="display: none;"></b>
+		<div id="div1">
+		<h2 align="center" style="margin-top: 30px;"><input id="contractName" <%--<%if(flag=="true") {%>readonly="readonly"<%} %>--%> value="材料费明细"  class="inputCss conName">模板</h2><!-- 计算测试费用合同 -->
+      　  <p>
+      			<table id="clmxTable" border="1px" cellspacing="0px;" cellpadding="10px;"><thead>
+      					<tr >
+      						<th style="width: 80px;">产品名称</th>
+      						<th style="width: 80px;">单位</th>
+      						<th style="width: 80px;">数量</th>
+      						<th style="width: 80px;">单价（元）</th>
+      						<th style="width: 80px;">金额（元）</th>
+      					</tr>
+			      </thead>
+			      <tbody>
+			      <%--<%if(descList!=null&&descList.size()>0){
+			    	  for(CaiLiaoFeiDesc desc:descList) {%>--%>
+			      		<tr>
+			      			<td style="width: 180px;"><%--<%=desc.getCpmc() %>--%>
+							</td>
+			      			<td style="width: 180px;"><%--<%=desc.getDw() %>--%>
+							</td>
+			      			<td style="width: 180px;"><%--<%=desc.getSl() %>--%>
+							</td>
+			      			<td style="width: 180px;"><%--<%=desc.getDj() %>--%>
+							</td>
+			      			<td style="width: 180px;"><%--<%=desc.getJe() %>--%>
+							</td>
+			      		</tr>
+			      			<%--<%} }else{ %>--%>
+			      		<tr>
+			      			<td><input id="cpmc1" class="inputCss"></td>
+			      			<td><input id="dw1" class="inputCss"></td>
+			      			<td><input id="sl1" class="inputCss"></td>
+			      			<td><input id="dj1" class="inputCss"></td>
+			      			<td><input id="je1" class="inputCss"></td></tr>
+			      			<%--<%} %>
+			      			<%if(descList!=null&&descList.size()>0){ 
+			      				double cost=(Double)request.getAttribute("cost");%>--%>
+			      		<tr id="last" align="center">
+			      			<td colspan="5">总计：人民币<%--<%=descList.get(0).getCostChn() %>--%>圆整（￥<%--<%=cost %>--%>元）</td>
+			      		</tr>
+			      				<%--<%} else{%>--%>
+			      		<tr id="last" align="center">
+			      			<td colspan="5">总计：人民币<input type="text" id="costChn" class="inputCss" style="width: 120px;"/>圆整（￥<input type="text" class="inputCss" id="cost" style="width: 60px"/>元）</td>
+			      		</tr>
+			      				<%--<%} %>--%>
+			      </tbody>
+			      </table>
+      	</p>　  
+      	<p style="float: right;"><strong><select id="cityName"><%--<%ArrayList<CityData> cityDatas2=(ArrayList<CityData>) session.getAttribute("cityDatas");
+																		for(CityData city:cityDatas2){%>
+																			<option value="<%=city.getCityName() %>"><%=city.getCityName() %></option>
+																		<%} %>--%></select></strong></p>
+		</div>
+		<div style="margin-top: 60px;"align="center"><input type="button" id="saveButton"  value="保存">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="nextButton"  value="继续添加"></div>
+		</div>
+</body>
+</html>

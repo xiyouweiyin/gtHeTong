@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>测试费明细</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/ceShiFeiDesc.js"></script>
+<script language="javascript" src="dayin/jquery-1.4.4.min.js"></script>
+<script language="javascript" src="dayin/jquery.jqprint-0.3.js"></script>
+<style type="text/css">
+	.inputCss{
+		border-left: 0px;border-right: 0px;border-top: 0px;border-color: green;
+	}
+	p{
+		line-height: 30px;
+	}
+	.conName{
+		font-size: 22px;
+		font-weight: normal;
+	}
+</style>
+</head>
+<body>
+<div style="display: none;"><table>
+	<%--<%ArrayList<CityData> cityDatas=(ArrayList<CityData>) session.getAttribute("cityDatas");int i=0;int j=0;
+			for(CityData city:cityDatas){ j=0;%>
+				<tr><td id="<%=i+""+j%>"><%=city.getBankName() %></td><td id="<%=i+""+(j+1)%>"><%=city.getBankAccountName() %></td><td id="<%=i+""+(j+2)%>"> <%=city.getBankAccount() %></td><td id="<%=i+""+(j+3)%>"><%=city.getId() %></td></tr>
+			<%i++;j++;} %>--%>
+			</table>
+			</div>
+			<div  style="width: 800px;margin-left: 100px;">
+				
+<form action="#" method="post"><b id="cityId" style="display: none;"></b>
+		<div id="div1">
+		<h2 align="center" style="margin-top: 30px;"><input id="contractName" value="艮泰测试清单"  class="inputCss conName">模板</h2>
+     <p>&nbsp;&nbsp;我公司为<input id="partyA" class="inputCss" style="width: 80px"/>提供<input id="productName" class="inputCss" style="width: 100px;"/>计算模拟软件<input id="productName2" class="inputCss" style="width: 100px;"/>的专业测试技术服务。为客户监控软件的运行，对软件的平台移植能力、 计算性能、功能适用性及并行效果进行测试，针对客户需求进行软件代码优化，提高计算效能。应用理论双精度浮点计算能力为
+<input id="productName3" class="inputCss" style="width: 100px;"/>的测试平台，测试时间为<input id="ceShiTime" class="inputCss" style="width: 60px;"/>个月，测试费用合计人民币<input id="costChn" class="inputCss" style="width: 100px;"/>元，测试明细如下：<br>
+<div align="center"> 
+<table border="1px" cellspacing="0px;" cellpadding="10px;">
+<tr align="center"><td>序号</td><td>测试内容</td><td>详细说明</td><td>金额（元）</td></tr>
+		<tr align="center"><td>1</td><td>运行环境配置</td><td>搭建并行测试环境，安装支持软件运行的各种数据库，调试和优化软件运行环境，对软件平台移植能力进行测试，给出详细配置说明、测试记录和分析报告</td><td><input id="cost1" class="inputCss" style="width: 60px;"/></td></tr>
+		<tr align="center"><td>2</td><td>并行测试</td><td>在共享存储的高性能服务器上，对软件的内存管理能力、 稳定性、单机并行效率进行测试，和分析，给出详细配置说明、测试记录和分析报告</td><td><input id="cost2" class="inputCss" style="width: 60px;"/></td></tr>
+		<tr align="center"><td>3</td><td>功能模块测试</td><td>采用多个测试算例对软件的结构分析模块的功能范围及计算效能进行测试</td><td><input id="cost3" class="inputCss" style="width: 60px;"/></td></tr>
+		<tr align="center"><td>4</td><td>软件优化</td><td>根据客户应用需求对软件结构分析模块进行代码优化，针对软件运行中出现的Bug进行修改优化，提高软件计算效能</td><td><input id="cost4" class="inputCss" style="width: 60px;"/></td></tr>
+</table></div></p>
+<p style="float: right;"><strong><select id="cityName"><%--<%ArrayList<CityData> cityDatas2=(ArrayList<CityData>) session.getAttribute("cityDatas");
+																		for(CityData city:cityDatas2){%>
+																			
+																			<option value="<%=city.getCityName() %>"><%=city.getCityName() %></option>
+																		<%} %>--%></select></strong></p>
+</div>
+		<div style="margin-top: 80px;" align="center"><input type="button" id="saveButton"  value="保存"></div>
+		</div>
+</body>
+</html>
